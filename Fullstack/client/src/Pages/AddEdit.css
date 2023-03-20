@@ -1,0 +1,9 @@
+form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  input[type="text"], input[type="email"], input[type="date"] {
+    width: 100%;
+    max-width: 300px;
+  }
