@@ -6,7 +6,6 @@ import { toast } from 'react-toastify';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BsSearch } from "react-icons/bs";
 import { FaEdit } from 'react-icons/fa';
-import { Modal, Button } from 'react-bootstrap';
 import { FaTrash } from 'react-icons/fa';
 
 
@@ -14,7 +13,6 @@ import { FaTrash } from 'react-icons/fa';
 
 const Home = () => {
     const [data , setData] = useState([]);
-    const [showDeleteDialog, setShowDeleteDialog] = useState(false);
 
 
     const loadData = async()=>{
@@ -79,6 +77,7 @@ const deleteDetails = (id) =>{
                               {data.map((item, index) => {
                                   return (
                                       <tr key={item.id}>
+                                     <td scope="row">{index+1}</td>
                                           <td>{item.firstname}</td>
                                           <td>{item.lastname}</td>
                                           <td>{item.location}</td>
